@@ -1,3 +1,4 @@
+
 !/bin/sh
 
 ## login as admin
@@ -30,6 +31,7 @@ oc adm policy add-scc-to-user privileged -z istio-pilot-service-account
 
 ### Deploy istio
 oc apply -f install/kubernetes/istio.yaml
+oc apply -f install/kubernetes/istio-initializer.yaml
 #oc apply -f istio/install/kubernetes/istio-auth.yaml
 #oc apply -f istio/install/kubernetes/istio-auth-with-cluster-ca.yaml
 #oc apply -f istio/install/kubernetes/istio-rbac-beta2.yaml
