@@ -1,0 +1,1 @@
+oc cluster up --service-catalog=true --logging=true --metrics=true
