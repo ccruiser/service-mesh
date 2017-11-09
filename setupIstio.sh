@@ -32,16 +32,16 @@ oc adm policy add-scc-to-user privileged -z istio-pilot-service-account
 ### Deploy istio
 oc apply -f install/kubernetes/istio.yaml
 oc apply -f install/kubernetes/istio-initializer.yaml
-#oc apply -f istio/install/kubernetes/istio-auth.yaml
-#oc apply -f istio/install/kubernetes/istio-auth-with-cluster-ca.yaml
-#oc apply -f istio/install/kubernetes/istio-rbac-beta2.yaml
+#oc apply -f install/kubernetes/istio-auth.yaml
+#oc apply -f install/kubernetes/istio-auth-with-cluster-ca.yaml
+#oc apply -f install/kubernetes/istio-rbac-beta2.yaml
 
 ### Deploy addons
-oc apply -f istio/install/kubernetes/addons/prometheus.yaml
-oc apply -f istio/install/kubernetes/addons/grafana.yaml
-oc apply -f istio/install/kubernetes/addons/servicegraph.yaml
-oc apply -f istio/install/kubernetes/addons/zipkin.yaml
-#oc apply -f istio/install/kubernetes/addons/istio.yaml
+oc apply -f install/kubernetes/addons/prometheus.yaml
+oc apply -f install/kubernetes/addons/grafana.yaml
+oc apply -f install/kubernetes/addons/servicegraph.yaml
+oc apply -f install/kubernetes/addons/zipkin.yaml
+#oc apply -f install/kubernetes/addons/istio.yaml
 
 
 ### Expose Services
