@@ -1,1 +1,3 @@
 oc cluster up --service-catalog=true --logging=true --metrics=true
+
+ --extra-config=apiserver.Admission.PluginNames="Initializers,NamespaceLifecycle,LimitRanger,ServiceAccount,DefaultStorageClass,GenericAdmissionWebhook,ResourceQuota"
